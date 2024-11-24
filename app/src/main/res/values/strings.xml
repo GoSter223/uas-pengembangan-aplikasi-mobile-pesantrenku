@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PesanternKu</string>
+    <string name="no_account">Dont have account? <b><font color="#000000">Create Account</font></b></string>
+    <string name="have_account">Have an account? <b><font color="#000000">Log In</font></b></string>
+</resources>

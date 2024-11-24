@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "828132992291",
+    "firebase_url": "https://tugas-pemrograman-visual-default-rtdb.firebaseio.com",
+    "project_id": "tugas-pemrograman-visual",
+    "storage_bucket": "tugas-pemrograman-visual.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828132992291:android:e30783478ce3cb49e89896",
+        "android_client_info": {
+          "package_name": "com.example.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASGs-QSRIxk235K3pIq1wb4v85Uiqwc80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828132992291:android:71627ef9b43ea921e89896",
+        "android_client_info": {
+          "package_name": "com.example.pesanternku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASGs-QSRIxk235K3pIq1wb4v85Uiqwc80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828132992291:android:bb4c0abdf403985be89896",
+        "android_client_info": {
+          "package_name": "tugas_pemrovisual.ac.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828132992291-kq38f7i2c42btskfh75boh6eiq52kpjc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tugas_pemrovisual.ac.id",
+            "certificate_hash": "b24345ffb8a02363906b13dce79b0c77e5404218"
+          }
+        },
+        {
+          "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASGs-QSRIxk235K3pIq1wb4v85Uiqwc80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828132992291-lb3qq91vp8teu9ksa0im1hnedf9nj7go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
