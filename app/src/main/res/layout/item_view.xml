@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="20dp"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="10dp"
+    android:paddingBottom="5dp">
 
     <TextView
         android:id="@+id/nama_pesantren"
@@ -27,31 +28,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="kyai"/>
-
-    <TextView
-        android:id="@+id/like"
-        android:layout_below="@id/nama_kyai"
-        android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Like"/>
-
-    <TextView
-        android:id="@+id/comment"
-        android:layout_below="@id/nama_kyai"
-        android:layout_marginRight="10dp"
-        android:layout_toRightOf="@id/like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comment"/>
-
-    <TextView
-        android:id="@+id/share"
-        android:layout_below="@id/nama_kyai"
-        android:layout_marginRight="10dp"
-        android:layout_toRightOf="@id/comment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share"/>
 
 </RelativeLayout>

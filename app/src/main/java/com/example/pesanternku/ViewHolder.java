@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
-    TextView nameView,alamat, kyai, comment;
+    TextView nameView,alamat, kyai;
     RelativeLayout parentLayout;
 
     public ViewHolder(@NonNull View itemView) {
@@ -21,15 +21,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         nameView = itemView.findViewById(R.id.nama_pesantren);
         alamat = itemView.findViewById(R.id.alamat_pesantren);
         kyai = itemView.findViewById(R.id.nama_kyai);
-        comment = itemView.findViewById(R.id.comment);
         parentLayout = itemView.findViewById(R.id.list_view);
-
-        comment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Context context = itemView.getContext();
-            }
-        });
     }
 
 }

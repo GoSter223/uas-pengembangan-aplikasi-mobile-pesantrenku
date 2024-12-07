@@ -46,7 +46,7 @@
         android:layout_marginTop="286dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Tulis komentar" />
 
     <Button
         android:id="@+id/btn_send_comment"

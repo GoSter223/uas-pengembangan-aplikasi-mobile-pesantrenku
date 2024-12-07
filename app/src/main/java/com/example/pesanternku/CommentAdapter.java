@@ -43,38 +43,60 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentHolder> {
             holder.deleteComment.setVisibility(View.VISIBLE);
         }
 
+//        holder.deleteComment.setOnClickListener(v -> {
+//            db.collection("comment")
+//                    .whereEqualTo("idComment", comment.getIdComment()) // Filter data berdasarkan idComment
+//                    .get()
+//                    .addOnSuccessListener(queryDocumentSnapshots -> {
+//                        if (!queryDocumentSnapshots.isEmpty()) {
+//                            for (DocumentSnapshot document : queryDocumentSnapshots) {
+//                                // Dapatkan ID dokumen
+//                                String documentId = document.getId();
+//                                Log.d("Firestore", "Document ID: " + documentId);
+//
+//                                // Lakukan sesuatu dengan ID, misalnya menghapus dokumen
+//                                db.collection("comment").document(documentId)
+//                                        .delete()
+//                                        .addOnSuccessListener(aVoid -> {
+//                                            Log.d("Firestore", "Document successfully deleted!");
+//                                            // Hapus item dari daftar lokal
+//                                            commentList.remove(position);
+//                                            Toast.makeText(context, "Komentar dihapus", Toast.LENGTH_SHORT).show();
+//
+//                                            // Beritahu adapter tentang perubahan
+//                                            notifyItemRemoved(position);
+//                                            notifyItemRangeChanged(position, commentList.size());
+//                                        })
+//                                        .addOnFailureListener(e -> Log.w("Firestore", "Error deleting document", e));
+//                            }
+//                        } else {
+//                            Log.d("Firestore", "No matching documents found.");
+//                        }
+//                    })
+//                    .addOnFailureListener(e -> Log.w("Firestore", "Error getting documents", e));
+//        });
+
         holder.deleteComment.setOnClickListener(v -> {
-            db.collection("comment")
-                    .whereEqualTo("email", comment.getEmailUser()) // Filter data berdasarkan idPesantren
-                    .get()
-                    .addOnSuccessListener(queryDocumentSnapshots -> {
-                        if (!queryDocumentSnapshots.isEmpty()) {
-                            for (DocumentSnapshot document : queryDocumentSnapshots) {
-                                // Dapatkan ID dokumen
-                                String documentId = document.getId();
-                                Log.d("Firestore", "Document ID: " + documentId);
+            String idComment = comment.getIdComment(); // Ambil ID komentar
 
-                                // Lakukan sesuatu dengan ID, misalnya menghapus dokumen
-                                db.collection("comment").document(documentId)
-                                        .delete()
-                                        .addOnSuccessListener(aVoid -> {
-                                            Log.d("Firestore", "Document successfully deleted!");
-                                            // Hapus item dari daftar lokal
-                                            commentList.remove(position);
+            // Langsung menghapus dokumen menggunakan idComment sebagai ID dokumen Firestore
+            db.collection("comment").document(idComment)
+                    .delete()
+                    .addOnSuccessListener(aVoid -> {
+                        Log.d("Firestore", "Document successfully deleted!");
+                        // Hapus item dari daftar lokal
+                        commentList.remove(position);
 
-                                            // Beritahu adapter tentang perubahan
-                                            notifyItemRemoved(position);
-                                            notifyItemRangeChanged(position, commentList.size());
-                                        })
-                                        .addOnFailureListener(e -> Log.w("Firestore", "Error deleting document", e));
-                            }
-                        } else {
-                            Log.d("Firestore", "No matching documents found.");
-                        }
+                        // Beritahu adapter tentang perubahan
+                        notifyItemRemoved(position);
+                        notifyItemRangeChanged(position, commentList.size());
                     })
-                    .addOnFailureListener(e -> Log.w("Firestore", "Error getting documents", e));
+                    .addOnFailureListener(e -> Log.w("Firestore", "Error deleting document", e));
+
             Toast.makeText(context, "Komentar dihapus", Toast.LENGTH_SHORT).show();
         });
+
+
     }
 
     @Override
