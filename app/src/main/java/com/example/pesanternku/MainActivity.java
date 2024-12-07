@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                         for (int i = 0; i < response.length(); i++) {
                             JSONObject item = response.getJSONObject(i);
                             listPesantren.add(item.getString("nama")); // Ambil nama pesantren
-                            pesantrenList.add(new Item(item.getString("nama"), item.getString("alamat"), item.getString("kyai"), "", ""));
+                            pesantrenList.add(new Item(item.getString("nama"), item.getString("alamat"), item.getString("kyai"), "", "", item.getString("id"), item.getJSONObject("kab_kota").getString("id")));
                         }
 
                         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listPesantren);

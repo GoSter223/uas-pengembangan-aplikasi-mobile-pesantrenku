@@ -37,8 +37,11 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
         holder.parentLayout.setOnClickListener(v -> {
             // Pastikan method getter sesuai dengan kelas Item
             Toast.makeText(context, "Anda memilih " + pesantren.getNama(), Toast.LENGTH_SHORT).show();
+            // Intent untuk berpindah ke CommentActivity
             Intent intent = new Intent(context, CommentActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  // Menambahkan flag untuk memulai Activity
+            intent.putExtra("idPesantren", pesantren.getIdPesantren()); // Mengirimkan idPesantren
+            intent.putExtra("idKota", pesantren.getIdKota());
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Menambahkan flag
             context.startActivity(intent);
         });
     }
